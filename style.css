@@ -1,0 +1,571 @@
+html{
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+
+}
+
+/* Genaral styles */
+body::-webkit-scrollbar{
+    display: none;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.hide-on-mobile{
+    display: none !important;
+}
+
+@media (min-width:992px){
+    .hide-on-mobile{
+        display: unset !important;
+    }
+
+
+    .hide-on-desktop{
+        display: none !important; /*importent it will not override*/
+    }
+}
+
+
+.pt-5{
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+}
+
+.p-3{
+    padding: 0.75rem;
+}
+
+.pb-5{
+    padding-bottom: 0.75rem;
+}
+
+.m-2{
+    margin: 0.2rem;
+}
+
+.mt-5{
+    margin-top: 1.25rem;
+}
+
+.section-title{
+    font-size: 2.5rem;
+    text-align: center;
+    color: #0e2a47;
+    letter-spacing: 2px;
+}
+
+.section-title span{
+    color: #4ad395;
+}
+
+.container{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.bg-green{
+    background-color: #fff;
+    background-size: cover;
+    
+}
+
+
+
+/* CSS for header section */
+header{
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem 2rem;
+    align-items: center;
+    background-color: #132c48;
+
+}
+
+.logo{
+    margin-right: auto;
+   height: 10vh;
+}
+
+.logo img{
+    width: 100px;
+}
+
+.nav-list{
+    list-style: none;
+    display: inline;
+}
+
+.nav-list li{
+    display: inline;
+     padding: 0 2rem;
+
+}
+
+.nav-list li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav-list li a:hover{
+    
+    color: #4ad395;
+}
+
+.action-button{
+    text-decoration: none;
+    color: black;
+    background-color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 2.5rem;
+}
+
+.action-button:hover{
+    background-color: #4ad395;
+}
+
+
+
+.mobile-button{
+    margin-left: 1.5rem;
+    z-index: 4;
+}
+
+.mobile-button div{
+    width: 35px;
+    height: 5px;
+    margin: 6px 0;
+    background-color: #4ad395;
+}
+
+
+
+.mobile-nav{
+    width: 100%;
+    height: 100vh;
+    background-color: #0e2a47;
+    display: flex;
+    flex-direction: wrap;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -100vh;
+    left: 0;
+    z-index: 3;
+    transition: 1s;
+
+}
+
+.mobile-nav li{
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    margin: 2rem 0;
+
+}
+
+.mobile-nav a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 2rem;
+}
+
+
+.mobile-nav-change{
+    top: 0;
+}
+
+.mobile-button-change .bar1{
+    transform: rotate(-45deg) translate(-15px);
+}
+.mobile-button-change .bar2{
+    opacity: 0;
+}
+.mobile-button-change .bar3{
+    transform: rotate(45deg) translate(-15px);
+
+}
+
+
+
+/* CSS for the hero section */
+
+.hero{
+    color: #fff;
+}
+
+.hero-bg{
+    background-image: url(img/herobg.jpg);
+    height: 87vh;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.hero-text{
+    width: 100%;
+    position: absolute;
+     bottom: 0;
+     text-align: center;
+     background-color: #2d333a9d;
+
+}
+
+.hero-text h1{
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+}
+
+
+/* About section */
+
+.about{
+    height: auto;
+}
+
+.about-img img{
+    width: 100%;
+
+}
+
+.about-text ul{
+    margin-left: 1.25rem;
+    padding-right: 0.5rem;
+}
+
+
+@media (min-width:640px){
+    .md-flex {
+        display: flex;
+    }
+    .about-text ul{
+        width: 50%;
+
+    }
+}
+
+@media (min-width:992px){
+    .lg-flex{
+        display: flex;
+    }
+    .about-text{
+        width: 50%;
+        padding-left: 1.25rem;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    .about-img{
+        width: 50%;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+}
+
+
+/* css for services section */
+.services{
+    height: 100vh;
+}
+
+.services h2{
+    color:  #0e2a47;
+    text-shadow: 1px 1px 2px black;
+    font-size: 40px;
+}
+
+.arrow-key{
+    animation: arrowKey 0.8s linear infinite;
+}
+
+@keyframes arrowKey{
+    0%{
+        transform: translateY(0);
+    }50%{
+        transform: translateY(-20px);
+    }100%{
+        transform: translateY(0);
+    }
+
+}
+
+.action-button i{
+    animation: horizondal-arrowKey 0.8s linear infinite;
+}
+
+
+@keyframes horizondal-arrowKey{
+    0%{
+        transform: translateX(0);
+    }50%{
+        transform: translateX(10px);
+        padding-left: 5px;
+        
+    }100%{
+        transform: translateX(0);
+    }
+}
+
+.action-button i{
+    color: #4ad395;
+}
+
+.section-title i{
+    color: #4ad395;
+
+}
+
+
+.section-title a{
+    text-decoration: none ;
+}
+
+.card img{
+    width: 100%;
+    height: 30vh;
+}
+
+.card {
+    background-color: #fff;
+    text-align: center;
+    border-radius: 1rem;
+}
+
+.card h3{
+    letter-spacing: 1px;
+}
+
+.button{
+    width: 40%;
+    height: 5vh;
+    background-color: #131916;
+    color: #fff;
+    border-radius: 30px;
+    border: none;
+    font-size: medium;
+    letter-spacing: 1px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.button span{
+    cursor: pointer;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span:after {
+    content: '\000bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -10px;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 25px;
+  }
+
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+
+.card:hover{
+    border: 3px solid rgba(0, 0, 0, 0.745);
+    color: #294b3a;
+}
+
+
+
+@media (min-width:640px){
+    .services .md-flex {
+        flex-wrap: wrap;
+    }
+    .services .w-50 {
+        width: 50%;
+        
+    }
+  
+}
+
+
+@media (min-width:992px){
+    .services .md-flex {
+        flex-wrap: unset;
+    }
+    .services .w-50 {
+        width: unset;
+    }
+  
+}
+
+@media (max-width:1500px){
+   .services{
+        height: auto;
+
+   }
+
+}
+
+@media (max-width:992px){
+    .services h2{
+        font-size: 30px;
+        text-shadow: 1px 1px 2px black;
+    }
+    .section-title h2{
+        font-size: 40px;
+    }
+}
+
+@media (max-width:640px){
+    .section-title h2{
+        font-size: 25px;
+    }
+}
+
+
+/*css for contact section */
+
+.contact{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgb(0, 0, 0), #000000), url();
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content:  center;
+}
+
+.contact-head{
+    position: absolute;
+    top: 50px;
+}
+
+.social{
+    position: absolute;
+    bottom: 30px;
+}
+
+.social a{
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.contact-head h1{
+    color: #fff;
+    letter-spacing: 2px;
+    font-size: 2rem;
+}
+
+.input-group{
+     margin-bottom: 30px;
+     position: relative;
+}
+
+input, textarea{
+    width: 100%;
+    padding: 10px;
+    outline: 0;
+    border: 1px solid #fff;
+    color: #fff;
+    background: transparent;
+    font-size: 15px;
+}
+
+label{
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 10px;
+    color: #fff;
+    cursor: text;
+    transition: 0.2s;
+}
+
+button{
+    padding: 10px 0;
+    color: #fff;
+    outline: none;
+    background: transparent;
+    border: 1px solid #fff;
+    width: 100%;
+    cursor: pointer;
+}
+
+input:focus~label,
+input:valid~label,
+textarea:focus~label,
+textarea:valid~label{
+    top: -35px;
+    font-size: 14px;
+}
+
+.contact-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.contact-row .input-group{
+    flex-basis: 48%;
+}
+
+.search-bar-div{
+    position: relative;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.search-bar-div form{
+    display: flex;
+}
+
+.search-bar-div{
+    width: 100%;
+    height: 10%;
+    max-width: 500px;
+    background: rgba(129, 122, 122, 0.2);
+    border-radius: 60px;
+    padding: 10px 20px;
+    backdrop-filter: blur(0.4px) saturate(180%);
+    border: 1px solid white;
+}
+
+.search-bar-div form{
+    position: absolute;
+    top: -4px;
+}
+
+.search-bar-div input{
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 24px 20px;
+    font-size: 20px;
+    color: #0e2a47;
+}
+
+::placeholder{
+    color: #0e2a47;
+}
